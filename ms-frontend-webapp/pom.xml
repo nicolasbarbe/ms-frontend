@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>info.magnolia.presentation</groupId>
+    <artifactId>ms-frontend</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>ms-frontend-webapp</artifactId>
+  <name>ms-frontend: webapp</name>
+  <packaging>war</packaging>
+  <dependencies>
+    
+    <dependency>
+      <groupId>info.magnolia.cloud.bundle</groupId>
+      <artifactId>magnolia-cloud-bundle-webapp</artifactId>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.cloud.bundle</groupId>
+      <artifactId>magnolia-cloud-bundle-webapp</artifactId>
+      <type>pom</type>
+    </dependency>
+
+     <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-legacy-admininterface</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>info.magnolia.resources</groupId>
+      <artifactId>magnolia-resources</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.resources</groupId>
+      <artifactId>magnolia-resources-app</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.categorization</groupId>
+      <artifactId>magnolia-categorization-support</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.categorization</groupId>
+      <artifactId>magnolia-categorization</artifactId>
+    </dependency>
+ 
+    <dependency>
+      <groupId>info.magnolia.activation</groupId>
+      <artifactId>magnolia-module-activation</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-groovy</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-app</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-jcr</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-templating</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-imaging</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.rest</groupId>
+      <artifactId>magnolia-rest-integration</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.rest</groupId>
+      <artifactId>magnolia-rest-services</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.templating</groupId>
+      <artifactId>magnolia-templating-essentials-models</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.templating</groupId>
+      <artifactId>magnolia-templating-essentials-imaging</artifactId>
+    </dependency>
+ 
+    <dependency>
+      <groupId>info.magnolia.site</groupId>
+      <artifactId>magnolia-site</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.site</groupId>
+      <artifactId>magnolia-site-app</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.cache</groupId>
+      <artifactId>magnolia-cache-app</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.cache</groupId>
+      <artifactId>magnolia-cache-browser-app</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.services</groupId>
+      <artifactId>rest-utils</artifactId>
+    </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <!-- exclude jars copied "physically" from the webapp overlay - so we only get those resolved by Maven's dependency management -->
+          <dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
