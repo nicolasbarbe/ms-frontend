@@ -131,7 +131,7 @@
 
     <dependency>
       <groupId>info.magnolia.services</groupId>
-      <artifactId>rest-utils</artifactId>
+      <artifactId>magnolia-http-utils</artifactId>
     </dependency>
 
 

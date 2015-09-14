@@ -58,7 +58,7 @@
 
       <dependency>
         <groupId>info.magnolia.services</groupId>
-        <artifactId>rest-utils</artifactId>
+        <artifactId>magnolia-http-utils</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
